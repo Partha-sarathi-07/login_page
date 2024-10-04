@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	<title>Login</title>
+	<link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+	<div id="login-container">
+
+		<!-- Title and sub heading -->
+		<div id="title">
+			<h1>Welcome Back</h1>
+			<p>Login to your account</p>
+		</div>
+
+		<!-- invalid email or password -->
+		<div id="invalid-credentials" class="hide">
+			<span class="material-symbols-outlined">error</span>
+			<p>Incorrect Email or Password</p>
+		</div>
+
+		<!-- Login form -->
+		<form name="login" id="login-form" autocomplete="off">
+
+			<!-- email -->
+			<div id="email" class="field-container">
+				<span id="label">Email</span>
+				<div id="email-input-error">
+					<input type="text" name="email-input" placeholder="example@gmail.com" class="form_input" required> 
+					<p class="hide">Enter a valid Email</p>
+				</div>
+			</div>
+
+			<!-- password -->
+			<div id="password" class="field-container">
+				<div id="password-type-selector">
+					<label class="selector">
+						<input type="radio" name="password-pin" id="alphanumeric-radio-btn" checked>
+						<span id="label">Password</span>
+					</label>
+					<label class="selector">
+						<input type="radio" name="password-pin" id="pin-radio-btn">
+						<span id="label">Pin</span>
+					</label>
+				</div>
+
+				<div id="password-inputs">
+
+					<!-- alphanumeric input -->
+					<div id="alphanumeric-input-container" class="alphanumeric-checked">
+						<input type="password" name="alphanumeric-password" placeholder="Enter your password"
+							class="form_input" required>						
+						<span id="show-password" class="material-symbols-outlined"> visibility </span>
+					</div>
+					
+					<!-- pin input -->
+					<div id="pin-inputs-container" class="pin-not-checked">
+						<input type="password" maxlength="1" placeholder="*">
+						<input type="password" maxlength="1" placeholder="*">
+						<input type="password" maxlength="1" placeholder="*">
+						<input type="password" maxlength="1" placeholder="*">
+						<input type="password" maxlength="1" placeholder="*">
+						<input type="password" maxlength="1" placeholder="*">
+					</div>
+					
+					<!-- Remember me and forgot password -->
+					<div id="other-options">
+						<label id="remember_me">
+							<input type="checkbox" name="Remember_me">
+							<span class="other-options-text">Remember me</span>
+						</label>
+						<p id="forget_password" class="other-options-text">Forgot Password?</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- login button -->
+			<div id="login-btn-container">
+			<button type="submit" id="login-btn" disabled>LOGIN</button>
+			</div>
+		</form>
+
+		<!-- sign up  -->
+		<p id="signup">Don't have an account? <a href="signup.html" id="signup-button">Sign up</a></p>
+	</div>
+
+	<script src="login_validation.js"></script>
+	<script src="./login.js"></script>
+</body>
+
+</html>

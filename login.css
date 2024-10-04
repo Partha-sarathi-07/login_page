@@ -1,0 +1,323 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto';
+    letter-spacing: 0.035em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100vw;
+    min-height: 100vh;
+    background:linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url("bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#login-container {
+    display: flex;
+    flex-direction: column;
+    padding: 3.5vw 4.5vw;
+    box-shadow: 0px 3px 3px rgba(0,0,0,0.20);
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 0.15vw;
+}
+
+#login-container > #title {
+    text-align: center;
+    margin-bottom: 0.80vw;
+}
+
+#login-container > #title > h1 {  
+    font-size: 1.5vw;
+    font-weight: 700;
+    color: #444;
+}
+
+#login-container > #title > p {
+    font-size: 0.55vw;
+    color: #666;
+    margin-top: 0.5vw;
+}
+
+#login-container .hide {
+    visibility: hidden;
+}
+
+#login-container .show {
+    visibility: visible;
+}
+
+#login-container > #invalid-credentials {
+
+    border: 1px solid #dd0c0c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 0.45vw 1.55vw;
+    margin-bottom: 1vw;
+    border-radius: 0.15vw;
+}
+
+#login-container > #invalid-credentials > span{
+    color: #dd0c0c;
+}
+
+#login-container > #invalid-credentials > p {
+    font-size: 0.65vw;
+    color: #dd0c0c;
+    font-weight: 500;
+    
+}
+
+#login-container > #login-form {
+    display: flex;   
+    flex-direction: column;
+    gap: 0.5vw;
+}
+
+#login-container > #login-form > .field-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vw;
+}
+
+#login-container > #login-form > .field-container #label {
+    font-size: 0.75vw;
+    color: #555;
+    font-weight: 400;
+}
+
+#login-container > #login-form .form_input {
+    width: 13vw;
+    height: 1.77vw;
+    border-radius: 3px;
+    border: none;
+    background: rgba(0, 0, 0, 0.08);
+    padding-left: 0.95vw;
+    padding-right: 1.80vw;
+    color: #444;
+    font-size: 0.75vw;
+    outline: none;
+    transition: background 0.15s;
+    font-family: inherit;
+}
+
+#login-container > #login-form > .field-container .form_input::placeholder {
+    color: #444;
+    font-weight: 100;
+    font-size: 0.75vw;
+}
+
+#login-container > #login-form > .field-container .form_input:hover {
+    background: rgba(0, 0, 0, 0.11);
+}
+
+#login-container > #login-form > .field-container .form_input:focus {
+    border: 1px solid #a97e08;
+    background: rgba(0, 0, 0, 0.13);
+}
+
+#login-container > #login-form > #email > #email-input-error > .error-border {
+    border: 1px solid #ff0000;
+}
+
+#login-container > #login-form > #email > #email-input-error > p {
+    margin-top: 0.25vw;
+    font-size: 0.55vw;
+    color: #ff0000;;
+    font-weight:300;
+}
+
+#login-container > #login-form > #password > #password-type-selector {
+    display: flex;
+    gap: 3.5vw;
+}
+
+#login-container > #login-form > #password > #password-type-selector .selector {
+    display: flex;
+    gap: 0.30vw;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+#login-container > #login-form > #password > #password-type-selector > .selector > input {
+    cursor: pointer;
+}
+
+#login-container > #login-form > #password > #password-type-selector > .selector > span:hover {
+    color: #444;
+    font-weight: 500;
+}
+
+#login-container > #login-form > #password > #password-inputs > .alphanumeric-not-checked {
+    display: none;
+}
+
+#login-container > #login-form > #password > #password-inputs > .alphanumeric-checked {
+    display: block;
+}
+
+#login-container > #login-form > #password > #password-inputs > .pin-not-checked {
+    display: none;
+}
+
+#login-container > #login-form > #password > #password-inputs > .pin-checked {
+    display: flex;
+}
+
+#login-container > #login-form > #password > #password-inputs > #alphanumeric-input-container {
+    position: relative;
+}
+
+.material-symbols-outlined {
+    color: #666;
+    font-size: 1vw;
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 300,
+    'GRAD' 0,
+    'opsz' 20
+}
+
+#login-container > #login-form > #password > #password-inputs > #alphanumeric-input-container > #show-password {
+    position: absolute;
+    right:3%;
+    top: 25%;
+    cursor: pointer;
+}
+
+#login-container > #login-form > #password > #password-inputs > #alphanumeric-input-container > #show-password:hover {
+    color: #444;
+}
+
+#login-container > #login-form > #password > #password-inputs > #pin-inputs-container {
+    width: 13vw;
+    height: 1.75vw;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.25vw;
+}
+
+#login-container > #login-form > #password > #password-inputs > #pin-inputs-container > input {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    border-style: none;
+    outline: none;
+    background: rgba(0, 0, 0, 0.08);
+    border: 1px solid transparent;
+    border-radius: 2px;
+    font-family: inherit;
+    font-size: 0.75vw;
+    color: #444;;
+}
+
+#login-container > #login-form > #password > #password-inputs > #pin-inputs-container > input::placeholder {
+    color: #444;
+    font-weight: 100;
+    font-size: 0.75vw;
+}
+
+#login-container > #login-form > #password > #password-inputs > #pin-inputs-container > input:hover {
+    background-color: rgba(0, 0, 0, 0.11);
+}
+
+#login-container > #login-form > #password > #password-inputs > #pin-inputs-container > input:focus {
+    background: rgba(0, 0, 0, 0.15);
+    border: 1px solid #a97e08;
+}
+
+#login-container > #login-form > #password > #password-inputs > #other-options {
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    margin-top: 0.5vw;
+    font-weight: 400;
+    color: #777;
+    font-size: 0.55vw;
+}
+
+#login-container > #login-form > #password > #password-inputs > #other-options > #remember_me {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.30vw;
+    cursor: pointer;
+}
+
+#login-container > #login-form > #password > #password-inputs > #other-options > #remember_me input {
+    width: 0.55vw;
+}
+
+#login-container > #login-form > #password > #password-inputs > #other-options > #remember_me input:checked + span, 
+#login-container > #login-form > #password > #password-inputs > #other-options .other-options-text:hover {
+    color: #444;
+    font-weight: 400;
+}
+
+#login-container > #login-form > #password > #password-inputs > #other-options > #forget_password {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#login-container > #login-form > #login-btn-container {
+    margin-top: 2.15vw;
+    text-align: center;
+}
+
+#login-container > #login-form > #login-btn-container > #login-btn {    
+    padding: 0.45vw 2vw;
+    border-radius: 10vw;
+    border: none;
+    font-weight:700;
+    letter-spacing: 0.10vw;
+    cursor: pointer;
+    background-color: #BCAE7E;
+    color: white;
+    font-size: 0.65vw;
+    transition: background-color 0.15s;
+}
+
+#login-container > #login-form > #login-btn-container > #login-btn:hover {
+    background-color: #B6A469;
+}
+
+#login-container > #login-form > #login-btn-container > #login-btn:active {
+    background-color: #A89557;
+}
+
+#login-container > #login-form > #login-btn-container > #login-btn:disabled {
+    cursor: not-allowed;
+    background-color: #9C8F5A;
+    color: #B7B7B7;
+}
+
+#login-container > #signup {
+    margin-top: 1.55vw;
+    font-size: 0.625vw;
+    color: #777;
+    letter-spacing: 0.05em;
+    font-weight: 400;
+}
+
+#login-container > #signup > #signup-button {
+    color: #555;
+    font-weight: 500;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#login-container > #signup > #signup-button:hover {
+    color: #444;
+    font-weight: 700;
+}
+
+
